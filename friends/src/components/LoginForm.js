@@ -34,10 +34,10 @@ const LoginForm = () => {
         <form onSubmit={login}>
 
             <input
-                type = 'text' name = 'username' placeholder = 'username' value = {credentials['username']} onChange = {handleChange} 
+                type = 'text' name = 'username' placeholder = 'username' value = {credentials.username} onChange = {handleChange} 
             />
             <input
-                type = 'password' name = 'password' placeholder = 'password' value = {credentials['password']} onChange = {handleChange} 
+                type = 'password' name = 'password' placeholder = 'password' value = {credentials.password} onChange = {handleChange} 
             />
 
         
