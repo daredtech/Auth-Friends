@@ -20,7 +20,7 @@ function App() {
         <div className='navigation'>
           <Link to='/login'>Login</Link>
           <Link to='/addnewfriend'>Add New Friend</Link>
-          <Link to='/friendslist'>Add New Friend</Link>
+          <Link to='/friendslist'>Friends list</Link>
         </div>
 
         <Route path='/login' component={LoginForm} />
