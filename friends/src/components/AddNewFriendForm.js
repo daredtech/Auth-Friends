@@ -5,6 +5,7 @@ const AddNewFriendForm = () => {
     const [friendInfo, setFriendInfo] = useState({id: '', name: '', age: '', email: ''});
 
     const addFriend = event => {
+        event.preventDefault();
         console.log('adding a new friend');
     }
 
@@ -32,7 +33,7 @@ const AddNewFriendForm = () => {
             />
        
             <button>add friend</button>
-            
+
             </form>
         </div>
     )

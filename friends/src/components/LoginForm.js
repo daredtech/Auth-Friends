@@ -9,7 +9,6 @@ const LoginForm = () => {
         // console.log('login event');
         event.preventDefault();
         console.log('posting the following credentials: ', {credentials});
-
         // 
         axios
         .post('http://localhost:5000/api/login', credentials)
