@@ -10,7 +10,16 @@ function App() {
   return (
     <div className="App">
       app
+
+      <div className='navigation'>
       <LoginForm/>
+
+      </div>
+
+
+
+  
+      
   
     </div>
   );
