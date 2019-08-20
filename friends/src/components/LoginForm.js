@@ -15,7 +15,7 @@ const LoginForm = () => {
         .post('http://localhost:5000/api/login', credentials)
         .then(response => {
             // console.log('response value: ', response);
-            localStorage.setItem('token', res.data.payload);
+            localStorage.setItem('token', response.data.payload);
         })
         .catch(error => {
             console.log('error: ', error);
