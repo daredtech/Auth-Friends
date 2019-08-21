@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+// import axios from 'axios';
 
 //
 import { axiosWithAuth } from '../utilities/axiosWithAuth';
@@ -9,13 +10,21 @@ const AddNewFriendForm = () => {
 
     const addFriend = event => {
         event.preventDefault();
-        console.log('adding a new friend');
+        console.log('adding a new friend', friendInfo);
+
+        axiosWithAuth()
+        .post('http://localhost:5000/api/friends', friendInfo)
+        .then(request => {
+            console.log('posted: ', request.data);})
+        .catch(error => {
+            console.log('error ', error);
+        })
     }
 
     const handleChange = event => {
         setFriendInfo({...friendInfo, [event.target.name]: event.target.value}
             );
-        console.log('target value: ', event.target.value);
+        // console.log('target value: ', event.target.value);
     }
 
     return (
@@ -35,7 +44,7 @@ const AddNewFriendForm = () => {
                 type = 'email' name = 'email' placeholder = 'email' value = {friendInfo.email} onChange = {handleChange} 
             />
        
-            <button>add friend</button>
+            <button onClick={addFriend}>add friend</button>
 
             </form>
         </div>

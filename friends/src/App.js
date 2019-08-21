@@ -12,6 +12,7 @@ import './App.css';
 
 
 function App() {
+  localStorage.clear();
   return (
     <Router>
       
@@ -19,8 +20,8 @@ function App() {
 
         <div className='navigation'>
           <Link to='/login'>Login</Link>
-          <Link to='/addnewfriend'>Add New Friend</Link>
-          <Link to='/friendslist'>Friends list</Link>
+          <Link className='logged' to='/addnewfriend'>Add New Friend</Link> 
+          <Link className='logged' to='/friendslist'>Friends list</Link>
         </div>
 
         <Route path='/login' component={LoginForm} />
