@@ -1,12 +1,10 @@
 import React, {useState} from 'react';
 import axios from 'axios';
 
-
-
-const LoginForm = () => {
+const LoginForm = (props) => {
 
     const [credentials, setCredentials] = useState({username: '', password: ''});
-
+   
     const login = event => {
         // console.log('login event');
         event.preventDefault();
@@ -17,11 +15,17 @@ const LoginForm = () => {
         .then(response => {
             console.log('response value: ', response);
             localStorage.setItem('token', response.data.payload);
+            console.log('props line 22: ', props);
+
+            // to redirect to list of friends
+            props.history.push('/friendslist');
         })
         .catch(error => {
             console.log('error: ', error);
         }
         )
+      
+      
     }
 
     const handleChange = event => {
