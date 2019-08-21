@@ -1,24 +1,58 @@
+body, html{
+    background-image: url('https://images.unsplash.com/photo-1471286274405-579f8d7132d8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80');
+
+    height: 100%; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 .App{
     margin: 1%;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
 }
 
 form{
+    width: 20rem;
+    margin-top: 10%;
+    padding-bottom: 5%;
+    border: 1px solid orange;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    margin: 1%;
-    width: 50%;
-    border: 1px solid orange;
+    align-items: center;
+    justify-content: center;
+}
+
+input{
+    width: 6rem;
+    margin-top: 3%;
+}
+
+button{
+    width: 5rem;
+    height: 1.5rem;
+    margin-top: 5%;
+    background-color: rgb(255, 204, 0);
+    border-radius: 25px;
 }
 
 .navigation{
-    font-size: 13px;
     display: flex;
-    flex-direction: column;
-    width: 50%;
+    display: flex;
+    width: 100%;
     padding: 1%;
+    justify-content: space-evenly; 
 }
 
-.logged{
-    display: none;
+.link{
+    text-decoration: none;
+    font-size: 10px;
+    color: black;
+    font-weight: bold;
 }
+
+

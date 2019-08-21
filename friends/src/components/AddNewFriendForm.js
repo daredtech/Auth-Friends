@@ -31,6 +31,8 @@ const AddNewFriendForm = () => {
         <div className='friend-form'>
             <form onSubmit={addFriend}>
 
+            <h3> Add Friend: </h3>
+
             <input
                 type = 'number' name = 'id' placeholder = 'id' value = {friendInfo.id} onChange = {handleChange} 
             />

@@ -1,6 +1,8 @@
 import React, {useState} from 'react';
 import axios from 'axios';
 
+
+
 const LoginForm = () => {
 
     const [credentials, setCredentials] = useState({username: '', password: ''});
@@ -31,6 +33,9 @@ const LoginForm = () => {
 
     return (
         <form onSubmit={login}>
+            <h3>
+                Login
+            </h3>
 
             <input
                 type = 'text' name = 'username' placeholder = 'username' value = {credentials.username} onChange = {handleChange} 

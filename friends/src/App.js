@@ -19,9 +19,9 @@ function App() {
       <div className='App'>
 
         <div className='navigation'>
-          <Link to='/login'>Login</Link>
-          <Link className='logged' to='/addnewfriend'>Add New Friend</Link> 
-          <Link className='logged' to='/friendslist'>Friends list</Link>
+          <Link className='link' to='/login'>Login</Link>
+          <Link className='link' to='/addnewfriend'>Add New Friend</Link> 
+          <Link className='link' to='/friendslist'>Friends list</Link>
         </div>
 
         <Route path='/login' component={LoginForm} />
